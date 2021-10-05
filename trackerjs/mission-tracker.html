@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Hari Ram" />
+    <title>פיקוח בלי ויכוח</title>
+    <meta
+      name="description"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./missions.css" />
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="margin-bottom: 30px;">
+      <div class="container-fluid">
+        <img src="./photo_2021-09-22 15.50.42.jpeg" height="30"/>
+
+        <a class="navbar-brand" href="#"> פיקוח בלי ויכוח</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup" style="float: right;">
+          <div class="navbar-nav">
+            <a class="nav-link " aria-current="page" href="budget-tracker.html">מנהל הוצאות/הכנסות</a>
+            <a class="nav-link active" href="mission-tracker.html">מנהל משימות</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <h1 style="color: white; text-align: center;">מנהל משימות</h1>
+    <main>
+      <div class="card add" style="width: 80%;
+      left: 13%;">
+        <div class="cb-container">
+          <button id="add-btn">+</button>
+        </div>
+        <div class="txt-container">
+          <label for="addt">הוספת משימה</label>
+          <input
+            type="text"
+            class="txt-input"
+            placeholder="הוספת משימה"
+            spellcheck="false"
+            autocomplete="off"
+            id="addt"
+          />
+          <select name="category" id="category">
+            <optgroup label="קטגוריות">
+              <option value="חברתי">חברתי</option>
+              <option value="חוגים">חוגים</option>
+              <option value="לימודים">לימודים</option>
+              <option value="מטלות אישיות">מטלות אישיות</option>
+              <option value="שונות">שונות</option>
+            </optgroup>
+          </select>
+          <select name="category" id="kids">
+            <optgroup label="ילד/ה">
+              <option value="מורן">מורן</option>
+              <option value="בן">בן</option>
+            </optgroup>
+          </select>
+        </div>
+      </div>
+      <ul class="todos"></ul>
+      <div class="card stat">
+        <p class="corner"><span id="items-left">0</span> משימות נותרו</p>
+        <div class="filter">
+          <button id="all" class="on">הכל</button>
+          <button id="active">פעילים</button>
+          <button id="completed">הושלמו</button>
+        </div>
+        <div class="corner">
+          <button id="clear-completed">נקה משימות שבוצעו</button>
+        </div>
+      </div>
+    </main>
+
+    <div>
+      <canvas id="myChart" style="background: white; margin-top: 30px; margin-bottom: 5px;"></canvas>
+    </div>
+    
+        <!-- Footer -->
+        <footer class="text-center text-white" style="margin-top: 20px;">
+          <!-- Grid container -->
+          <div class="container p-4">
+    
+            <!-- Section: Form -->
+            <section class="">
+              <form action="">
+                <!--Grid row-->
+                <div class="row d-flex justify-content-center">
+                  <!--Grid column-->
+                  <div class="col-auto">
+                    <!-- Submit button -->
+                    <button type="submit" onclick="sendEmail()" class="btn btn-outline-light mb-4">
+                      שליחה
+                    </button>
+                  </div>
+    
+                  <div class="col-auto">
+                    <p class="pt-2">
+                      <strong>לכל עזרה או תקלה ניתן לפנות בדואר אלקטרוני</strong>
+                    </p>
+                  </div>
+    
+                </div>
+                <!--Grid row-->
+              </form>
+            </section>
+    
+            <!-- Section: Links -->
+          </div>
+          <!-- Grid container -->
+    
+          <!-- Copyright -->
+          <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2021 Practicom All Rights Reserved
+          </div>
+          <!-- Copyright -->
+        </footer>
+        <!-- Footer -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="./missions.js"></script>
+  </body>
+</html>
